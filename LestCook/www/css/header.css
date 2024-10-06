@@ -1,0 +1,64 @@
+/* !FUENTES IMPORTADAS ACA */
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+/* !FUENTES IMPORTADAS ACA */
+
+.header {
+  background-color: #ecdfcc;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 1vw 5px 1vw;
+  font-family: "Exo 2", sans-serif;
+  font-size: 1rem;
+  font-weight: bolder;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.507); /* Efecto de sombra */
+}
+
+.headerUl {
+  display: flex;
+  list-style: none;
+}
+
+.headerList {
+  margin: 1vw;
+  position: relative; /* Necesario para el posicionamiento del pseudo-elemento */
+  padding: 3px 5px; /* Espaciado interno */
+}
+
+.headerList:hover {
+  transform: scale(1.1);
+  transition: 0.7s;
+}
+
+.headerList::after {
+  content: ""; /* Contenido vacío para el pseudo-elemento */
+  position: absolute; /* Posicionamiento absoluto */
+  left: 0; /* Desde la izquierda */
+  bottom: -4px; /* Desde la parte inferior */
+  height: 2px; /* Altura de la barrita */
+  width: 100%; /* Ancho completo */
+  background-color: #697565; /* Color de la barrita */
+  transform: scaleX(0); /* Inicialmente no se ve */
+  transition: transform 0.3s ease; /* Transición suave */
+}
+
+.headerList:hover::after {
+  transform: scaleX(1); /* Expandir la barrita al hacer hover */
+}
+
+.botonSalir {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Exo 2", sans-serif;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.botonSalir:hover {
+  transform: scale(1.1);
+  transition: 0.7s;
+}

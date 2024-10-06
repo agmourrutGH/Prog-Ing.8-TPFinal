@@ -1,52 +1,57 @@
 <!DOCTYPE html>
 <html>
-<head>
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *">
+  <head>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *"
+    />
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
 
     <!-- ? Color theme for statusbar | No se que es esto -->
-    <meta name="theme-color" content="#2196f3">
+    <meta name="theme-color" content="#2196f3" />
 
     <title>Lets Cooking</title>
-    
-    <link rel="stylesheet" href="../../lib/framework7/css/framework7.min.css">
-    
-    <link rel="stylesheet" href="../../css/styles.css">
 
-</head>
+    <link rel="stylesheet" href="../../lib/framework7/css/framework7.min.css" />
 
-<body>
-    
-    
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/header.css" />
+  </head>
+
+  <body>
     <section>
-        <header>
-            <div>
-                <a href="el link que sea el inicio">LOGO</a> <!-- TODO: Futuro donde estara el logo, por ahora un A para tener el espacio reservado-->
-            </div>
+      <header class="header">
+        <div class="headerDiv">
+          <a href="el link que sea el inicio">LOGO</a>
+          <!-- TODO: Futuro donde estara el logo, por ahora un A para tener el espacio reservado-->
+        </div>
 
-            <div>
-                <ul>
-                    <li class="headerList">Inicio1</li>
-                    <li class="headerList">Inicio2</li>
-                    <li class="headerList">Inicio3</li>
-                    <li class="headerList">Inicio4</li>
-                    <li class="headerList">Inicio4</li>
-                </ul>
-            </div>
+        <div class="listaDiv">
+          <ul class="headerUl">
+            <li class="headerList"><a href="" class="aLista">Home</a></li>
+            <li class="headerList"><a href="" class="aLista">Seccion 1</a></li>
+            <li class="headerList"><a href="" class="aLista">Seccion 1</a></li>
+            <li class="headerList"><a href="" class="aLista">Seccion 1</a></li>
+          </ul>
+        </div>
 
-            <div>
-                <button id="botonSalir">Salir</button>
-            </div>
-        </header>
+        <div class="botonDiv">
+          <button class="botonSalir" id="btSalir">Salir</button>
+        </div>
+      </header>
     </section>
 
     <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script
+      type="text/javascript"
+      src="lib/framework7/js/framework7.min.js"
+    ></script>
     <script type="text/javascript" src="js/my-app.js"></script>
-
-</body>
-
+  </body>
 </html>
