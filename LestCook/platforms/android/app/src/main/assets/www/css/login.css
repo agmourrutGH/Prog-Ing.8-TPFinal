@@ -1,0 +1,92 @@
+/* !FUENTES IMPORTADAS ACA */
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+/* !FUENTES IMPORTADAS ACA */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0; /* Color de fondo suave */
+  font-family: "Exo 2", sans-serif;
+}
+
+.loginContenedor {
+  background-color: #ffffff; /* Fondo blanco para el formulario */
+  border: 1px solid #000; /* Borde negro */
+  border-radius: 10px; /* Esquinas redondeadas */
+  padding: 200px; /* Espacio interno */
+  width: 800px; /* Ancho del formulario aumentado */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  text-align: left; /* Centrar texto dentro del contenedor */
+}
+
+h1 {
+  margin: 0; /* Quitar margen */
+  font-size: 1.8em; /* Tamaño de fuente más grande */
+  color: #333; /* Color del texto */
+}
+
+.label {
+  display: block; /* Mostrar cada etiqueta en una nueva línea */
+  margin-bottom: 5px; /* Espacio inferior de las etiquetas */
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%; /* Ancho completo */
+  padding: 12px; /* Espacio interno */
+  margin-bottom: 20px; /* Aumento del espacio inferior */
+  background-color: #eee;
+  border: none;
+  font-size: 1rem;
+  border-radius: 1rem;
+  color: lightcoral;
+  box-shadow: 0 0.4rem #dfd9d9;
+  cursor: pointer;
+}
+
+.iContrasena input {
+  outline-color: lightcoral;
+}
+.iUsuario input {
+  outline-color: lightcoral;
+}
+
+.botonesLogin {
+  display: flex; /* Usar flexbox para los botones */
+  justify-content: space-between; /* Espaciado entre botones */
+}
+
+button {
+  background-color: #007bff; /* Color de fondo azul */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Esquinas redondeadas */
+  padding: 10px; /* Espacio interno */
+  cursor: pointer; /* Cambiar cursor al pasar el ratón */
+  width: 48%; /* Ancho de los botones */
+  transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+button:hover {
+  background-color: #0056b3; /* Color al pasar el ratón */
+}
+
+.ui-btn-Register {
+  position: absolute; /* Posicionamiento absoluto */
+  top: 20px; /* Distancia desde la parte superior */
+  right: 20px; /* Distancia desde el lado derecho */
+  background-color: #28a745; /* Color verde para el botón de registro */
+  color: white; /* Color del texto */
+  border-radius: 5px; /* Esquinas redondeadas */
+  padding: 10px; /* Espacio interno */
+  width: 10%; /* Ancho completo */
+  margin-top: 15px; /* Espacio superior para separar del formulario */
+  transition: background-color 0.3s; /* Transición suave */
+}
+
+.ui-btn-Register:hover {
+  background-color: #218838; /* Color al pasar el ratón */
+}
