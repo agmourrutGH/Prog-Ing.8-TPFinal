@@ -8,7 +8,7 @@
   text-align: center;
   align-items: center;
   justify-content: space-between;
-  padding: 5px 1vw 5px 1vw;
+  padding: 0 1vw 0 1vw;
   font-family: "Exo 2", sans-serif;
   font-size: 1rem;
   font-weight: bolder;
@@ -25,7 +25,7 @@
 .headerList {
   margin: 1vw;
   position: relative; /* Necesario para el posicionamiento del pseudo-elemento */
-  padding: 3px 5px; /* Espaciado interno */
+  padding: 0 5px; /* Espaciado interno */
 }
 
 .headerList:hover {
