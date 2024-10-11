@@ -17,42 +17,40 @@
     <meta name="theme-color" content="#2196f3" />
 
     <title>Inciar Sesión</title>
-
+    
     <link rel="stylesheet" href="../../lib/framework7/css/framework7.min.css" />
     <link rel="stylesheet" href="../../css/styles.css" />
     <link rel="stylesheet" href="../../css/login.css" />
+    <script type="text/javascript" src="../../jquery/jquery-2.2.3.min.js"></script>
   </head>
 
   <body>
     <div data-role="page" class="login" id="pgLogin">
-      <div data-role="header">
-        <h1>Iniciar Sesión</h1>
-      </div>
-
       <div>
         <div data-role="main" class="loginContenedor">
-            <button class="ui-btn-Register" id="btRegistrarse">Registrarse</button>
+          <h1>Iniciar Sesión</h1>
+          <button class="ui-btn-Register" id="btRegister">
+            Registrarse
+          </button>
           <form class="formContenedor">
-            <label id="lbUsuario">Usuario:</label>
+            <label id="lbUsuario">Usuario</label>
             <input class="iUsuario" type="text" id="inUsuario" value="" />
             <br />
-            <label id="lbContrasena">Contraseña:</label>
-            <input class="iContrasena" type="password" id="inContrasena" value="" />
+            <label id="lbContrasena">Contraseña</label>
+            <input class="iContrasena" type="password" id="inContrasena" value=""/>
           </form>
           <br /><br />
           <div class="botonesLogin">
-            <button class="ui-btn" id="btLogin">Ingresar</button>
             <button class="ui-btn" id="btExit">Salir</button>
+            <button class="ui-btn" id="btLogin">Ingresar</button>
           </div>
         </div>
       </div>
     </div>
- 
-    <script type="text/javascript" src="cordova.js"></script>
-    <script
-      type="text/javascript"
-      src="lib/framework7/js/framework7.min.js"
-    ></script>
-    <script type="text/javascript" src="js/my-app.js"></script>
+
+    <script type="text/javascript" src="../../cordova.js"></script>
+    <script type="text/javascript" src="../../lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="../../js/my-app.js"></script>
+    <script type="text/javascript" src="../controlador/login.js"></script>
   </body>
 </html>

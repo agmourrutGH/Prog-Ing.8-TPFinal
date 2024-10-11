@@ -7,7 +7,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
+  margin: -15px;
   background-color: #4b4b4b;
   font-family: "Exo 2", sans-serif;
 }
@@ -115,8 +115,103 @@ button:hover {
 }
 
 .ui-btn-Back svg{
-  width: 20px; /* Ajusta el ancho del SVG */
-  height: 20px; /* Ajusta la altura del SVG */
-  margin-right: 8px; /* Espacio entre el SVG y el texto */
-  fill: white; /* Cambia el color del SVG al blanco */
+  width: 20px; 
+  height: 20px; 
+  margin-right: 8px; 
+  fill: white; 
 }
+
+
+@media (max-width: 768px) {
+  .loginContenedor {
+    padding: 50px; 
+    width: 90%; 
+  }
+
+  h1, .h1Register {
+    font-size: 2.5em; 
+  }
+
+  button {
+    width: 100%; 
+    margin-bottom: 10px;
+  }
+
+  .botonesLogin {
+    flex-direction: column;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .loginContenedor {
+    padding: 30px;
+    width: 90%; 
+    margin: 15px -22px 0px 0px;
+  }
+
+  h1, .h1Register {
+    font-size: 2em;
+  }
+
+  .ui-btn-Back {
+    width: 15%;
+    padding: 10px;
+    margin: 10px -20px;
+  }
+
+  .ui-btn-Register{
+    width: 30%;
+    padding: 15px;
+    margin: 15px -18px;
+  }
+  
+}
+.botonesLogin {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+input[type="text"],
+input[type="password"],
+button {
+  max-width: 100%;
+}
+@media (max-width: 360px) {
+  .loginContenedor {
+    padding: 20px;
+    width: 90%; 
+    margin: 15px auto;
+  }
+
+  h1, .h1Register {
+    font-size: 1.8em; 
+    margin-bottom: 15px; 
+  }
+
+  .label {
+    font-size: 0.8em; 
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    font-size: 0.9em; 
+  }
+
+  .ui-btn-Back {
+    width: 15%; 
+    padding: 10px;
+    margin: 10px -20px; 
+  }
+
+  .ui-btn-Register {
+    width: 30%;
+    padding: 15px;
+    margin: 15px -18px;
+  }
+
+  .botonesLogin {
+    flex-direction: column; 
+  }
+}
+
