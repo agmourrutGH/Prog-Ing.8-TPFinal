@@ -13,9 +13,13 @@
   font-size: 1rem;
   font-weight: bolder;
   margin: 10px;
-  border-radius: 10px;
+  border-radius: 42px;
   height: 70px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.507); /* Efecto de sombra */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .headerUl {
@@ -27,27 +31,6 @@
   margin: 1vw;
   position: relative; /* Necesario para el posicionamiento del pseudo-elemento */
   padding: 0 5px; /* Espaciado interno */
-}
-
-.headerList:hover {
-  transform: scale(1.1);
-  transition: 0.7s;
-}
-
-.headerList::after {
-  content: ""; /* Contenido vacío para el pseudo-elemento */
-  position: absolute; /* Posicionamiento absoluto */
-  left: 0; /* Desde la izquierda */
-  bottom: -4px; /* Desde la parte inferior */
-  height: 2px; /* Altura de la barrita */
-  width: 100%; /* Ancho completo */
-  background-color: #697565; /* Color de la barrita */
-  transform: scaleX(0); /* Inicialmente no se ve */
-  transition: transform 0.3s ease; /* Transición suave */
-}
-
-.headerList:hover::after {
-  transform: scaleX(1); /* Expandir la barrita al hacer hover */
 }
 
 .botonSalir {
