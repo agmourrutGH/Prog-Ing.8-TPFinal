@@ -24,12 +24,29 @@
     <link rel="stylesheet" href="../../css/header.css" />
   </head>
 
-  <body>
-
-      <div id="header-div">
-      </div>
-      
+  <body> 
     <!-- !ACA SE INSERTARIA EL HEADER -->
+
+    <!-- ?ACA VAMOS A AGREGAR LA SECCIONES DEL INDEX -->
+
+    <div class="buscador">
+      <input class="buscadorInput" type="text">
+    </div>
+
+    <section class="seccionIngredientes">
+      <div>
+        <div class="tituloIngredientes">
+          <h2>Destacados</h2>
+        </div>
+        <div class="seccionesDiv">
+          <div class="secciones">Seccion</div>
+          <div class="secciones">Seccion</div>
+          <div class="secciones">Seccion</div>
+          <div class="secciones">Seccion</div>
+        </div>
+      </div>
+
+    </section>
 
     <script type="text/javascript" src="cordova.js"></script>
     <script
@@ -37,13 +54,6 @@
       src="lib/framework7/js/framework7.min.js"
     ></script>
     <script type="text/javascript" src="js/my-app.js"></script>
-
-    <script>
-      fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('header-div').innerHTML = data;
-        });
     </script>
   </body>
 </html>
