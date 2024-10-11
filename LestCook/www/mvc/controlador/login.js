@@ -13,3 +13,8 @@ function login(){
     var contrasena = inContrasena.val().trim();
     inContrasena.val(contrasena);
 }
+
+$('#btRegister').click(register);
+function register(){
+    window.location.href='mvc/vista/register.html';
+}
