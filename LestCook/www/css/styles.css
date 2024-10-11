@@ -1,7 +1,12 @@
+/* !FUENTES IMPORTADAS ACA */
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+/* !FUENTES IMPORTADAS ACA */
+
 /* ?CONFIGURACION GENERAL PARA TODOS LOS ESTILOS */
 * {
   margin: 0;
   padding: 0;
+  font-family: "Exo 2", sans-serif;
 }
 
 a,
@@ -18,7 +23,38 @@ h6 {
 /* ?CONFIGURACION GENERAL PARA TODOS LOS ESTILOS */
 
 body {
-  background: #4b4b4b;
+  background: #f0f0f0;
+}
+
+
+/* !boludeces de index */
+
+.scrollable-content {
+  overflow-y: auto; /* Permitir scroll vertical */
+  -webkit-overflow-scrolling: touch; /* Para un mejor scroll en dispositivos táctiles */
+  height: 100%; /* O el valor que necesites para limitar el alto */
+}
+
+.buscador {
+  background-color: rgb(233, 233, 233);
+  border-radius: 4px;
+  border: solid 1px #000000;
+  height: 20px;
+}
+
+.seccionesDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.secciones {
+  background-color: rgba(0, 67, 122, 0.425);
+  width: 160px;
+  height: 100px;
+  border-radius: 15px;
+  margin: 5px;
+  padding: 10px;
 }
 
 /*
