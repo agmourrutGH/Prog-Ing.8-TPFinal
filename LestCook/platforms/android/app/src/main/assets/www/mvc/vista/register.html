@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *"
+    />
+
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- ? Color theme for statusbar | No se que es esto -->
+    <meta name="theme-color" content="#2196f3" />
+
+    <title>Registrarse</title>
+
+    <link rel="stylesheet" href="../../lib/framework7/css/framework7.min.css" />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/login.css" />
+    <script type="text/javascript" src="../../jquery/jquery-2.2.3.min.js"></script>
+  </head>
+  
+  <body>
+    <div data-role="page" class="login" id="pgLogin">
+        <div>
+            <div data-role="main" class="loginContenedor">
+              <h1 class="h1Register">Registrarse</h1>
+
+              <button class="ui-btn-Back" id="btBack">
+                <svg fill="#000000" version="1.1" baseProfile="tiny" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" width="800px" height="800px" viewBox="0 0 42 42" xml:space="preserve">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="8.4"> <polygon fill-rule="evenodd" points="27.066,1 7,21.068 26.568,40.637 31.502,35.704 16.865,21.068 32,5.933 "/> </g>
+                    <g id="SVGRepo_iconCarrier"> <polygon fill-rule="evenodd" points="27.066,1 7,21.068 26.568,40.637 31.502,35.704 16.865,21.068 32,5.933 "/> </g>
+                    </svg>
+              </button>
+              <form class="formContenedor">
+                  <label id="lbUsuario">Nombre</label>
+                  <input class="iUsuario" type="text" id="inUsuario" value="" />
+                  <br />
+                  <label id="lbUsuario">Email</label>
+                  <input class="iUsuario" type="text" id="inUsuario" value="" />
+                  <br />
+                  <label id="lbContrasena">Contraseña</label>
+                <input class="iContrasena" type="password" id="inContrasena" value=""/>
+              </form>
+              <br /><br />
+              <div class="botonesLogin">
+                <button class="ui-btn" id="btExit">Salir</button>
+                <button class="ui-btn" id="btRegister">Registrarme</button>
+              </div>
+            </div>
+    </div>
+    <script type="text/javascript" src="../../cordova.js"></script>
+    <script type="text/javascript" src="../../lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="../../js/my-app.js"></script>
+    <script type="text/javascript" src="../controlador/register.js"></script>
+  </body>
+</html>
