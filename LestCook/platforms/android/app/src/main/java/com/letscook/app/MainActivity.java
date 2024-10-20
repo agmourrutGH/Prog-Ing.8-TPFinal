@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.ies.iesweek;
+package com.letscook.app;
 
 import android.os.Bundle;
 import org.apache.cordova.*;

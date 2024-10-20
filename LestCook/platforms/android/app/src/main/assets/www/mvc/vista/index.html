@@ -19,31 +19,27 @@
     <title>Lets Cooking</title>
 
     <link rel="stylesheet" href="../../lib/framework7/css/framework7.min.css" />
-
+    <script type="text/javascript" src="../../jquery/jquery-2.2.3.min.js"></script>
     <link rel="stylesheet" href="../../css/styles.css" />
     <link rel="stylesheet" href="../../css/header.css" />
   </head>
 
-  <body>
-
-      <div id="header-div">
-      </div>
-      
-    <!-- !ACA SE INSERTARIA EL HEADER -->
-
-    <script type="text/javascript" src="cordova.js"></script>
-    <script
-      type="text/javascript"
-      src="lib/framework7/js/framework7.min.js"
-    ></script>
-    <script type="text/javascript" src="js/my-app.js"></script>
-
+  <body> 
+    <div id="header"></div>
+    
     <script>
-      fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('header-div').innerHTML = data;
+        $(document).ready(function() {
+            $('#header').load('header.html', function(response, status, xhr) {
+                if (status == "error") {
+                    console.error("Error al cargar el encabezado: " + xhr.status + " " + xhr.statusText);
+                }
+            });
         });
+    </script>
+    <script type="text/javascript" src="../controlador/index.js"></script>
+    <script type="text/javascript" src="../../cordova.js"></script>
+    <script type="text/javascript" src="../../lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="../../js/my-app.js"></script>
     </script>
   </body>
 </html>
