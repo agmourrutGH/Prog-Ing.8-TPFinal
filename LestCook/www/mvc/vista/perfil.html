@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#2196f3" />
+    <title>Perfil del Usuario</title>
+
+    <link rel="stylesheet" href="../../lib/framework7/css/framework7.min.css" />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/perfil.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="../../jquery/jquery-2.2.3.min.js"></script>
+</head>
+
+<body>
+    <div class="profile-container">
+        <header>
+            <h1>Perfil del Usuario</h1>
+        </header>
+
+        <div class="profile-box">
+            <img src="ruta/a/tu/foto-de-perfil.jpg" alt="Foto de Usuario" class="profile-pic" />
+
+            <div class="edit-profile">
+                <a href="#" id="edit-perfil">Editar Perfil</a>
+            </div>
+
+            <p class="name">Juan Pérez</p>
+            <p class="email">juan.perez@example.com</p>
+
+            <div class="profile-actions">
+                <button id="upload-recipe">Subir Receta</button>
+                <button id="change-password">Cambiar contraseña</button>
+                <button id="support">Soporte</button>
+                <button class="edit-logout" id="logout">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 LetsCook. Todos los derechos reservados.
+    </footer>
+
+    <script type="text/javascript" src="../controlador/perfil.js"></script>
+    <script type="text/javascript" src="../../cordova.js"></script>
+    <script type="text/javascript" src="../../lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="../../js/my-app.js"></script>
+</body>
+</html>

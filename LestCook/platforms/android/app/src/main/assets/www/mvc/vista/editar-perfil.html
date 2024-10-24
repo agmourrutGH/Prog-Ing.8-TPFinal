@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *"
+    />
+
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- ? Color theme for statusbar | No se que es esto -->
+    <meta name="theme-color" content="#2196f3" />
+
+    <title>Editar Perfil</title>
+    
+    <link rel="stylesheet" href="../../lib/framework7/css/framework7.min.css" />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/editar-perfil.css" />
+    <script type="text/javascript" src="../../jquery/jquery-2.2.3.min.js"></script>
+  </head>
+
+  <body>
+
+    <h2>Editar Perfil</h2>
+    <form action="/actualizar-perfil" method="POST" enctype="multipart/form-data">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+    
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="biografia">Biografía:</label>
+        <textarea id="biografia" name="biografia" rows="4" required></textarea>
+    
+        <label for="foto">Foto de Perfil:</label>
+        <input type="file" id="foto" name="foto" accept="image/*">
+    
+        <button class="btn-actualizarFoto" type="submit">Actualizar Perfil</button>
+    </form>
+
+    <script type="text/javascript" src="../../cordova.js"></script>
+    <script type="text/javascript" src="../../lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="../../js/my-app.js"></script>
+    
+  </body>
+</html>

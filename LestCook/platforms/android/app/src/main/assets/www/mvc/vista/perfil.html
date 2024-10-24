@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *"
+    />
+
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <meta name="theme-color" content="#2196f3" />
+
+    <title>Perfil del Usuario</title>
+
+    <link rel="stylesheet" href="../../lib/framework7/css/framework7.min.css" />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/perfil.css" />
+    <script type="text/javascript" src="../../jquery/jquery-2.2.3.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Perfil de Usuario</h1>
+    </header>
+    <div>
+      <h2>Información del Usuario</h2>
+      <img
+        src="ruta/a/tu/foto-de-perfil.jpg"
+        alt="Foto de Juan Pérez"
+        width="150"
+      />
+      <p class="name">Juan Pérez</p>
+      <p class="email">juan.perez@example.com</p>
+      <p class="description">
+        Amante de la cocina mediterránea y aficionado a la repostería.
+      </p>
+      <p class="edit-profile" id="edit-perfil">
+        <a>Editar Perfil</a>
+      </p>
+
+      <h2>Recetas Favoritas</h2>
+      <ul>
+        <li>Paella Valenciana</li>
+        <li>Tarta de Chocolate</li>
+        <li>Gazpacho Andaluz</li>
+      </ul>
+
+      <h2>Actividad Reciente</h2>
+      <ul>
+        <li>Publicó una nueva receta: "Tortilla Española"</li>
+        <li>Comentar en la receta: "Ensalada César"</li>
+        <li>Guardó la receta: "Mousse de Mango"</li>
+      </ul>
+    </div>
+    <footer>
+      &copy; 2024 LestCook. Todos los derechos reservados.
+    </footer>
+    <script type="text/javascript" src="../controlador/perfil.js"></script>
+    <script type="text/javascript" src="../../cordova.js"></script>
+    <script
+      type="text/javascript"
+      src="../../lib/framework7/js/framework7.min.js"
+    ></script>
+    <script type="text/javascript" src="../../js/my-app.js"></script>
+  </body>
+</html>

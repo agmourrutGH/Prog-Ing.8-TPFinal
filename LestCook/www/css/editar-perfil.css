@@ -1,0 +1,155 @@
+/* !FUENTES IMPORTADAS ACA */
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+/* !FUENTES IMPORTADAS ACA */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f3e5;
+    font-family: "Exo 2", sans-serif;
+    padding: 20px;
+}
+
+.edit-profile-container {
+    max-width: 400px;
+    margin: auto;
+    background: white; 
+    padding: 30px; 
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-picture {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-picture img.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #1c274c; 
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+}
+
+.change-photo-btn {
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+    background-color: #2196f3;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+}
+
+.change-photo-btn svg {
+    fill: white;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px; 
+    font-weight: bold;
+    color: #555; 
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px; 
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s; 
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: #2196f3; 
+    outline: none;
+}
+
+button {
+    background-color: #1c274c;
+    color: white; 
+    padding: 12px; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.2s; 
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); 
+}
+
+@media (max-width: 768px) {
+    .edit-profile-container {
+        padding: 20px; 
+    }
+
+    h2 {
+        font-size: 2.5em; 
+    }
+}
+
+@media (max-width: 480px) {
+    .edit-profile-container {
+        padding: 15px;
+        width: 90%; 
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 360px) {
+    .edit-profile-container {
+        padding: 10px;
+        width: 90%; 
+    }
+
+    h2 {
+        font-size: 1.8em; 
+        margin-bottom: 15px; 
+    }
+
+    label {
+        font-size: 0.9em; 
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        font-size: 0.9em; 
+    }
+}
