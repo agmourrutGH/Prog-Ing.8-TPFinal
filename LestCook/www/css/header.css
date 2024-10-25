@@ -20,7 +20,19 @@
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 100; /* Asegura que esté por encima del contenido */
+  animation: slideUp 0.7s ease;
 }
+
+@keyframes slideUp {
+  from {
+      transform: translateY(100%);
+  }
+  to {
+      transform: translateY(0);
+  }
+}
+
 
 .headerUl {
   display: flex;

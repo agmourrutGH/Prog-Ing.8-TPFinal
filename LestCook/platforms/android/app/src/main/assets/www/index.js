@@ -2,6 +2,7 @@ function cambiarDePagina(){
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     window.location.href='mvc/vista/header.html';
 =======
     window.location.href='mvc/vista/login.html';
@@ -12,4 +13,7 @@ function cambiarDePagina(){
 =======
     window.location.href='mvc/vista/login.html';
 >>>>>>> perfil-usuario
+=======
+    window.location.href='mvc/vista/index.html';
+>>>>>>> index-laure
  }
