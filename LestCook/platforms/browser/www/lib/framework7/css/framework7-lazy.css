@@ -6797,6 +6797,11 @@ button {
   -ms-user-select: none;
   user-select: none;
 }
+
+#btExit .ripple-wave {
+  display: none !important;
+}
+
 .md .ripple-wave {
   left: 0;
   top: 0;

@@ -6,11 +6,15 @@
     },
     "displayName": "Lest Cook",
     "dependencies": {
-        "cordova-android": "^8.1.0"
+        "cordova-android": "^8.1.0",
+        "cordova-sqlite-storage": "6.1.0"
     },
     "cordova": {
         "platforms": [
             "android"
-        ]
+        ],
+        "plugins": {
+            "cordova-sqlite-storage": {}
+        }
     }
 }

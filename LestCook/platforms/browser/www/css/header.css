@@ -1,0 +1,65 @@
+/* !FUENTES IMPORTADAS ACA */
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+/* !FUENTES IMPORTADAS ACA */
+
+.header {
+  background-color: #ecdfcc;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1vw 0 1vw;
+  font-family: "Exo 2", sans-serif;
+  font-size: 1rem;
+  font-weight: bolder;
+  margin: 10px;
+  border-radius: 42px;
+  height: 70px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.507); /* Efecto de sombra */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100; /* Asegura que esté por encima del contenido */
+  animation: slideUp 0.7s ease;
+}
+
+@keyframes slideUp {
+  from {
+      transform: translateY(100%);
+  }
+  to {
+      transform: translateY(0);
+  }
+}
+
+
+.headerUl {
+  display: flex;
+  list-style: none;
+}
+
+.headerList {
+  margin: 1vw;
+  position: relative; /* Necesario para el posicionamiento del pseudo-elemento */
+  padding: 0 5px; /* Espaciado interno */
+}
+
+.botonSalir {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Exo 2", sans-serif;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.botonSalir:hover {
+  transform: scale(1.1);
+  transition: 0.7s;
+}
+
+.svgs {
+    height: 35px;
+    width: 35px;
+  }
