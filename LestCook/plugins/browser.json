@@ -7,8 +7,15 @@
     "files": {}
   },
   "installed_plugins": {
+    "cordova-plugin-advanced-http": {
+      "ANDROIDBLACKLISTSECURESOCKETPROTOCOLS": "SSLv3,TLSv1",
+      "PACKAGE_NAME": "com.letscook.app"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.letscook.app"
+    },
     "cordova-sqlite-storage": {
-      "PACKAGE_NAME": "org.devgirl.framework7.mediaexplorer"
+      "PACKAGE_NAME": "com.letscook.app"
     }
   },
   "dependent_plugins": {}

@@ -1,101 +1,102 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *"
-    />
 
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover"
-    />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+<head>
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
 
-    <!-- ? Color theme for statusbar | No se que es esto -->
-    <meta name="theme-color" content="#2196f3" />
+  <meta charset="utf-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
 
-    <title>Lets Cooking</title>
+  <!-- ? Color theme for statusbar | No se que es esto -->
+  <meta name="theme-color" content="#2196f3" />
 
-    <link rel="stylesheet" href="../../lib/framework7/css/framework7.min.css" />
-    <script type="text/javascript" src="../../jquery/jquery-2.2.3.min.js"></script>
-    <link rel="stylesheet" href="../../css/styles.css" />
-    <link rel="stylesheet" href="../../css/header.css" />
-  </head>
+  <title>Lets Cooking</title>
 
-  <body> 
-    <div id="header"></div>
-    
-    <script>
-        $(document).ready(function() {
-            $('#header').load('header.html', function(response, status, xhr) {
-                if (status == "error") {
-                    console.error("Error al cargar el encabezado: " + xhr.status + " " + xhr.statusText);
-                }
-            });
-        });
-    </script>
+  <link rel="stylesheet" href="../../lib/framework7/css/framework7.min.css" />
+  <script type="text/javascript" src="../../jquery/jquery-2.2.3.min.js"></script>
+  <link rel="stylesheet" href="../../css/styles.css" />
+  <link rel="stylesheet" href="../../css/header.css" />
+</head>
 
-    <!-- ?ACA VAMOS A AGREGAR LA SECCIONES DEL INDEX -->
-<div class="contenidoPrincipal">
+<body>
+  <div id="header"></div>
 
-  <div class="tituloPrincipal">
+  <script>
+    $(document).ready(function () {
+      $('#header').load('header.html', function (response, status, xhr) {
+        if (status == "error") {
+          console.error("Error al cargar el encabezado: " + xhr.status + " " + xhr.statusText);
+        }
+      });
+    });
+  </script>
 
-    <h1>¡Bienvenido a</h1>
-    <h1 class="tittleLetsCook"> LetsCook</h1>
-    <h1>!</h1>
-  </div>
+  <!-- ?ACA VAMOS A AGREGAR LA SECCIONES DEL INDEX -->
+  <div class="contenidoPrincipal">
 
-  <div class="buscador">
-    <input class="buscadorInput" type="text" placeholder="Busca lo que necesites">
-  </div>
+    <div class="tituloPrincipal">
 
-  <section class="seccionIngredientes">
-    <div>
+      <h1>¡Bienvenido a</h1>
+      <h1 class="tittleLetsCook"> LetsCook</h1>
+      <h1>!</h1>
+    </div>
+
+    <div class="buscador">
+      <input class="buscadorInput" type="text" placeholder="Busca lo que necesites">
+    </div>
+
+    <section class="seccionIngredientes">
+      <div>
+        <div class="tituloIngredientes">
+          <h2 class="h2tittle">Destacados</h2>
+        </div>
+        <div class="seccionesDiv">
+          <div class="secciones" data-category="Carnes">
+            <img class="pollo" src="../imagenes/pollo.png" alt="">
+            <h4 class="comidaTitulo">Carnes</h4>
+          </div>
+          <div class="secciones" data-category="Carbohidratos">
+            <img class="plato" src="../imagenes/carbohidratos.png" alt="">
+            <h4 class="comidaTitulo2">Carbohidratos</h4>
+          </div>
+          <div class="secciones" data-category="Desayunos">
+            <img class="plato" src="../imagenes/desayuno.webp" alt="">
+            <h4 class="comidaTitulo">Desayunos</h4>
+          </div>
+          <div class="secciones" data-category="Ensaladas">
+            <img class="plato" src="../imagenes/ensalada.png" alt="">
+            <h4 class="comidaTitulo">Ensaladas</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="recetas">
+
       <div class="tituloIngredientes">
-        <h2 class="h2tittle">Destacados</h2>
+        <h2 class="h2tittle">¡Inspecciona recetas!</h2>
       </div>
-      <div class="seccionesDiv">
-        <div class="secciones">
-          <img class="pollo" src="../imagenes/pollo.png" alt="">
-          <h4 class="comidaTitulo">Carnes</h4>
-        </div>
-        <div class="secciones">
-          <img class="plato" src="../imagenes/carbohidratos.png" alt="">
-          <h4 class="comidaTitulo2">Carbohidratos</h4>
-        </div>
-        <div class="secciones">
-          <img class="plato" src="../imagenes/desayuno.webp" alt="">  
-          <h4 class="comidaTitulo">Desayunos</h4>
-        </div>
-        <div class="secciones">
-          <img class="plato" src="../imagenes/ensalada.png" alt="">
-          <h4 class="comidaTitulo">Ensaladas</h4>
+
+      <div class="contenedorRecetas">
+
+        <div class="recetasDiv">
+          <p>¡Encuentra tu plato!</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="recetas">
+    </section>
+  </div>
+  
+  <script src="../modelo/database.js"></script>
+  <script type="module"  src="../controlador/recetas.js"></script>
+  <script type="text/javascript" src="../controlador/index.js"></script>
+  <script type="text/javascript" src="../../cordova.js"></script>
+  <script type="text/javascript" src="../../lib/framework7/js/framework7.min.js"></script>
+  <script type="text/javascript" src="../../js/my-app.js"></script>
+  </script>
+</body>
 
-    <div class="tituloIngredientes">
-      <h2 class="h2tittle">¡Inspecciona recetas!</h2>
-    </div>
-
-    <div class="contenedorRecetas">
-
-      <div class="recetasDiv">
-        <p>¡Encuentra tu plato!</p>
-      </div>
-    </div>
-
-  </section>
-</div>
-
-    <script type="text/javascript" src="../../cordova.js"></script>
-    <script type="text/javascript" src="../../lib/framework7/js/framework7.min.js"></script>
-    <script type="text/javascript" src="../../js/my-app.js"></script>
-    </script>
-  </body>
 </html>

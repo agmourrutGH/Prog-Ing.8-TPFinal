@@ -11,7 +11,6 @@
 body {
     background-color: #f8f3e5;
     font-family: "Exo 2", sans-serif;
-    padding: 20px;
     overflow-x: hidden; 
 }
 
@@ -30,8 +29,7 @@ h1 {
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
-    max-width: 600px; 
-    margin: auto; 
+    height: 100vh;
 }
 
 img.profile-pic {
@@ -61,12 +59,12 @@ img.profile-pic {
 
 .profile-actions {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
-button {
+.botonesPerfil {
     margin: 5px;
-    padding: 10px 20px;
+    padding: 25px 20px;
     border: none;
     border-radius: 6px;
     background: #2196f3;
@@ -74,13 +72,34 @@ button {
     font-size: 1em;
     cursor: pointer;
     transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.backButton {
+    background: none;
+    border: none;
+    width: 30px;
+    margin-bottom: 30px;
 }
 
 .edit-logout{
+    margin: 5px;
+    padding: 25px 20px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: rgb(244, 65, 65);
 }
 
-button:hover {
+.botonesPerfil:hover {
     background: #1c74b3;
 }
 

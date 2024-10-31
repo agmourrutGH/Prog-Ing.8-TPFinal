@@ -2,56 +2,62 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
 /* !FUENTES IMPORTADAS ACA */
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: -15px;
-  background-color: #4b4b4b;
+* {
+  margin: 0;
+  padding: 0;
   font-family: "Exo 2", sans-serif;
+}
+
+body {
+  background-color: #ecdfcc;
 }
 
 .loginContenedor {
   background-color: #ecdfcc;
-  border: 2px solid #000;
-  border-radius: 10px;
-  padding: 150px;
-  width: 600px;
-  box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
   text-align: left;
+  padding: 20px;
 }
 
 h1 {
-  margin: 0 0 50px;
-  font-size: 4em;
+  margin: 100px 0 50px;
+  font-size: 3em;
   color: #333;
   text-align: center;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
-.h1Register{
-  margin: 0 0 60px;
-  font-size: 4em;
-  color: #333;
-  text-align: center;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+
 }
 
-.label {
-  display: block;
-  margin-bottom: 5px;
+.h1Register{
+  margin: 0px 0 60px;
+  font-size: 4em;
+  color: #333;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  margin-top: 90px;
+}
+
+.labelDiv {
+  margin-right: 30px;
+  margin-bottom: 20px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.inputDiv {
+  display: flex;
+  justify-content: center;
 }
 
 input[type="text"],
 input[type="password"] {
-  width: 100%;
+  width: 95%;
   padding: 12px;
   margin-bottom: 30px;
   background-color: #eee;
-  border: none;
+  border: 1px solid black;
   font-size: 1rem;
   border-radius: 8px;
-  color: lightcoral;
+  color: rgb(9, 9, 9);
   box-shadow: 0 0.4rem #dfd9d9;
   cursor: pointer;
 }
@@ -80,138 +86,96 @@ button {
   transition: background-color 0.3s;
 }
 
-button:hover {
-  background-color: #0056b3;
-}
+
 
 .ui-btn-Register {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: #212e58;
+  position: relative; /* Cambiado a relative */
+  background-color: #2c5eff;
   color: white;
-  border-radius: 5px;
+  border-radius: 7px;
   padding: 20px;
-  width: 10%;
-  margin-top: 15px;
+  width: 44%;
   transition: background-color 0.3s;
+  /* Puedes ajustar el margen para colocarlo en la posición deseada */
+  margin-right: 0px;
+  margin-top: 0px;
+  top: 0;
+  right: 0;
 }
+
 
 .ui-btn-Register:hover {
   background-color: #0056b3;
 }
 
-.ui-btn-Back{
+.contenedorRegisterbt {
+  position: relative; /* Necesario para que el botón se posicione en relación a este contenedor */
+  width: 100%;
+}
+
+.ui-btn-Register {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: #212e58;
+  top: 0; /* Alinéalo al borde superior */
+  right: 0; /* Alinéalo al borde derecho */
+  background-color: #2c5eff;
   color: white;
-  border-radius: 5px;
+  border-radius: 7px;
   padding: 20px;
-  width: 8%;
-  margin-top: 15px;
+  margin: 1.5px; /* Ajusta el margen para darle un poco de separación de los bordes */
   transition: background-color 0.3s;
 }
 
-.ui-btn-Back svg{
-  width: 20px; 
-  height: 20px; 
-  margin-right: 8px; 
-  fill: white; 
+.btnRegistro {
+  background-color: #2c5eff;
+  color: white;
+  border-radius: 7px;
+  padding: 20px;
+  margin: 1.5px; /* Ajusta el margen para darle un poco de separación de los bordes */
+  transition: background-color 0.3s;
+  width: 100%;
+  margin-top: 5px;
 }
 
-
-@media (max-width: 768px) {
-  .loginContenedor {
-    padding: 50px; 
-    width: 90%; 
-  }
-
-  h1, .h1Register {
-    font-size: 2.5em; 
-  }
-
-  button {
-    width: 100%; 
-    margin-bottom: 10px;
-  }
-
-  .botonesLogin {
-    flex-direction: column;
-  }
-}
-
-
-@media (max-width: 480px) {
-  .loginContenedor {
-    padding: 30px;
-    width: 90%; 
-    margin: 15px -22px 0px 0px;
-  }
-
-  h1, .h1Register {
-    font-size: 2em;
-  }
-
-  .ui-btn-Back {
-    width: 15%;
-    padding: 10px;
-    margin: 10px -20px;
-  }
-
-  .ui-btn-Register{
-    width: 30%;
-    padding: 15px;
-    margin: 15px -18px;
-  }
-  
-}
-.botonesLogin {
+.informacion {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-input[type="text"],
-input[type="password"],
-button {
-  max-width: 100%;
-}
-@media (max-width: 360px) {
-  .loginContenedor {
-    padding: 20px;
-    width: 90%; 
-    margin: 15px auto;
-  }
-
-  h1, .h1Register {
-    font-size: 1.8em; 
-    margin-bottom: 15px; 
-  }
-
-  .label {
-    font-size: 0.8em; 
-  }
-
-  input[type="text"],
-  input[type="password"] {
-    font-size: 0.9em; 
-  }
-
-  .ui-btn-Back {
-    width: 15%; 
-    padding: 10px;
-    margin: 10px -20px; 
-  }
-
-  .ui-btn-Register {
-    width: 30%;
-    padding: 15px;
-    margin: 15px -18px;
-  }
-
-  .botonesLogin {
-    flex-direction: column; 
-  }
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 120px;
 }
 
+
+.backLogin {
+  position: absolute;
+  top: 0; /* Alinéalo al borde superior */
+  left: -10px; /* Alinéalo al borde derecho */
+  background: none;
+  color: white;
+  border-radius: 7px;
+  margin: 1.5px; /* Ajusta el margen para darle un poco de separación de los bordes */
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  color: black;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.ui-btn-exit {
+  background-color: rgb(244, 65, 65);
+  height: 60px;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 15px;
+  cursor: pointer;
+  width: 50%;
+  transition: background-color 0.3s;
+}
+
+.contenedorForm {
+  border: 1px solid black;
+  padding: 30px;
+  border-radius: 14px;
+  background-color: #f8ecdb;
+}

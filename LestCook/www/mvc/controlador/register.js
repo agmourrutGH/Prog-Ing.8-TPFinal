@@ -6,39 +6,51 @@ $(document).ready(function() {
 
         // Recoger los valores de los campos del formulario
         const nombre = $('#inNombre').val(); // Cambié el id a inNombre
-        const email = $('#inEmail').val(); // Cambié el id a inEmail
+        const correo = $('#inEmail').val(); // Cambié el id a inEmail
         const contrasena = $('#inContrasena').val();
 
         // Validación simple
-        if (!nombre || !email || !contrasena) {
+        if (!nombre || !correo || !contrasena) {
             alert("Por favor, completa todos los campos.");
             return;
         }
 
-        // Aquí llamamos a la función para registrar el usuario en la base de datos
-        registrarUsuario(nombre, email, contrasena);
+        // Aquí llamamos a la función para registrar el usuario en la API
+        registrarUsuario(nombre, correo, contrasena);
     });
 
-    // Función para registrar al usuario en SQLite
-    function registrarUsuario(nombre, email, contrasena) {
-        // Aquí debes implementar la lógica para insertar el usuario en la base de datos SQLite
-        // Asegúrate de que la base de datos esté configurada y que tengas la función para insertar
-        const db = openDatabase('miBaseDeDatos', '1.0', 'Base de datos de usuarios', 2 * 1024 * 1024);
-        
-        db.transaction(function(tx) {
-            // Crear la tabla si no existe
-            tx.executeSql('CREATE TABLE IF NOT EXISTS usuarios (id INTEGER PRIMARY KEY AUTOINCREMENT, nombre TEXT, email TEXT, contrasena TEXT)');
+    // Función para registrar al usuario en la API
+    function registrarUsuario(nombre, correo, contrasena) {
+        // Crear el objeto con los datos del usuario
+        const userData = {
+            nombre: nombre,
+            correo: correo, // Asegúrate de que el campo se llame 'correo' en la API
+            contrasena: contrasena
+        };
 
-            // Insertar el nuevo usuario
-            tx.executeSql('INSERT INTO usuarios (nombre, email, contrasena) VALUES (?, ?, ?)', [nombre, email, contrasena], function(tx, result) {
-                // Registro exitoso
-                alert("Usuario registrado exitosamente.");
-                // Redirigir al index.html después del registro
-                window.location.href = "index.html"; // Cambia esto si la ruta es diferente
-            }, function(tx, error) {
-                // Manejo de errores
-                alert("Error al registrar el usuario: " + error.message);
-            });
+        // Hacer la solicitud POST a la API
+        fetch('https://lets-cooking-backend-g4mo.vercel.app/api/users/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(userData), // Convertir el objeto a JSON
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error en la solicitud: ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Registro exitoso
+            alert("Usuario registrado exitosamente.");
+            // Redirigir al login
+            window.location.href = "login.html"; // Cambia esto si la ruta es diferente
+        })
+        .catch(error => {
+            // Manejo de errores
+            alert("Error al registrar el usuario: " + error.message);
         });
     }
 

@@ -2,9 +2,10 @@
 <html>
   <head>
     <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *"
-    />
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; connect-src https://lets-cooking-backend-g4mo.vercel.app; style-src 'self' 'unsafe-inline'; media-src *"
+  />
+  
 
     <meta charset="utf-8" />
     <meta
@@ -17,7 +18,7 @@
     <meta name="theme-color" content="#2196f3" />
 
     <title>Registrarse</title>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/whatwg-fetch/3.6.2/fetch.min.js"></script>
     <link rel="stylesheet" href="../../lib/framework7/css/framework7.min.css" />
     <link rel="stylesheet" href="../../css/styles.css" />
     <link rel="stylesheet" href="../../css/login.css" />
@@ -28,35 +29,54 @@
     <div data-role="page" class="login" id="pgLogin">
         <div>
             <div data-role="main" class="loginContenedor">
-              <h1 class="h1Register">Registrarse</h1>
-
-              <button class="ui-btn-Back" id="btBack">
-                <svg fill="#000000" version="1.1" baseProfile="tiny" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" width="800px" height="800px" viewBox="0 0 42 42" xml:space="preserve">
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
-                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="8.4"> <polygon fill-rule="evenodd" points="27.066,1 7,21.068 26.568,40.637 31.502,35.704 16.865,21.068 32,5.933 "/> </g>
-                    <g id="SVGRepo_iconCarrier"> <polygon fill-rule="evenodd" points="27.066,1 7,21.068 26.568,40.637 31.502,35.704 16.865,21.068 32,5.933 "/> </g>
+              
+              <div class="contenedorRegisterbt">
+                <div class="botonRegistro">
+                  <button class="backLogin" id="btBack">
+                    <svg fill="#1b1b1b" version="1.1" baseProfile="tiny" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" width="30px" height="30px" viewBox="0 0 42 42" xml:space="preserve">
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0"> <polygon fill-rule="evenodd" points="27.066,1 7,21.068 26.568,40.637 31.502,35.704 16.865,21.068 32,5.933 "/> </g>
+                      <g id="SVGRepo_iconCarrier"> <polygon fill-rule="evenodd" points="27.066,1 7,21.068 26.568,40.637 31.502,35.704 16.865,21.068 32,5.933 "/> </g>
                     </svg>
-              </button>
-              <form class="formContenedor">
+                    <span>Volver a login</span>
+                  </button>
+                </div>
+              </div>
+
+              <h1 class="h1Register">Registrarse</h1>
+              
+              <div class="contenedorForm">
+                <form class="formContenedor">
                   <label id="lbUsuario">Nombre</label>
-                  <input class="iUsuario" type="text" id="inUsuario" value="" />
+                  <input class="iUsuario" type="text" id="inNombre" value="" />
                   <br />
                   <label id="lbUsuario">Email</label>
-                  <input class="iUsuario" type="text" id="inUsuario" value="" />
+                  <input class="iUsuario" type="text" id="inEmail" value="" />
                   <br />
                   <label id="lbContrasena">Contraseña</label>
                 <input class="iContrasena" type="password" id="inContrasena" value=""/>
               </form>
+
               <br /><br />
               <div class="botonesLogin">
-                <button class="ui-btn" id="btExit">Salir</button>
+                <button class="ui-btn-exit" id="btExit">Salir</button>
                 <button class="ui-btn" id="btRegister">Registrarme</button>
               </div>
             </div>
+
+              </div>
     </div>
+
+    <div class="informacion">
+      <p>¡Let's Cook!</p>
+      <div class="reserved-tag">
+        <span>© 2024 Grupo 8 IES T.T</span>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../controlador/register.js"></script>
     <script type="text/javascript" src="../../cordova.js"></script>
     <script type="text/javascript" src="../../lib/framework7/js/framework7.min.js"></script>
     <script type="text/javascript" src="../../js/my-app.js"></script>
-    <script type="text/javascript" src="../controlador/register.js"></script>
   </body>
 </html>

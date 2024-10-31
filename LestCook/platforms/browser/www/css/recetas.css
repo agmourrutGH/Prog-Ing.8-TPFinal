@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Exo 2", sans-serif;
+}
+
+h1 {
+    margin-bottom: 80px;
+}
+
+#recipesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.imagenBack {
+    width: 125px;
+    height: auto;
+    position: relative;
+    top: -30px; /* Ajusta este valor para controlar cuánto sobresale la imagen */
+    border-radius: 15px;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.288));
+}
+
+.recetasContenedor {
+    border: solid 1px #0f0f0f;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    flex-direction: column;
+    text-align: center;
+    width: 160px;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.162));
+    margin-bottom: 25px;
+}
+
+p {
+    margin: 5px;
+}
+
+.usuarioReceta {
+    margin-bottom: 20px;
+}
+
+h2 {
+    position: relative;
+    top: -10px;
+}
+
+.recetasTitulo {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+.backButton {
+    background: none;
+    border: none;
+    width: 30px;
+    margin: 30px 0 10px 20px;
+}

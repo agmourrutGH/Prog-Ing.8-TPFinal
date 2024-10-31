@@ -1,34 +1,62 @@
-$(document).ready(function() {
-    // Credenciales simuladas
-    const validUsername = "admin";
-    const validPassword = "1234";
-  
-    // Manejo del clic en el botón de login
-    $("#btLogin").on("click", function() {
-      // Obtener los valores de usuario y contraseña
-      const username = $("#inUsuario").val();
-      const password = $("#inContrasena").val();
-  
-      // Verificar las credenciales
-      if (username === validUsername && password === validPassword) {
-        // Si las credenciales son correctas, redirigir a index.html
-        window.location.href = "index.html";
-      } else {
-        // Si son incorrectas, mostrar un mensaje de error (puedes personalizarlo)
-        alert("Usuario o contraseña incorrectos");
-      }
+$(document).ready(function () {
+    $('#btLogin').on('click', function (e) {
+        e.preventDefault(); // Evitar el comportamiento por defecto del botón
+
+        // Obtener los valores ingresados
+        const usuario = $('#inUsuario').val().trim();
+        const contrasena = $('#inContrasena').val().trim();
+
+        // Validar que los campos no estén vacíos
+        if (!usuario || !contrasena) {
+            alert('Por favor, completa todos los campos.');
+            return;
+        }
+
+        // Realizar la solicitud de inicio de sesión
+        fetch('https://lets-cooking-backend-g4mo.vercel.app/api/users/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ correo: usuario, contrasena })
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error al iniciar sesión');
+            }
+            return response.json(); // Aquí se espera un JSON
+        })
+        .then(data => {
+            // Aquí puedes manejar la respuesta exitosa
+            if (data.message === 'Inicio de sesión exitoso') {
+                alert('Inicio de sesión exitoso!');
+
+                // Almacena el ID del usuario en sessionStorage
+                const userId = data.user.id; // Accede al ID desde el objeto user
+                sessionStorage.setItem('userId', userId); // Almacena en sessionStorage
+
+                // Redirigir a index.html
+                window.location.href = 'index.html'; // Redirigir a index.html
+            } else {
+                alert('Usuario o contraseña incorrectos.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Ocurrió un error al iniciar sesión.');
+        });
     });
-  
-    // Manejo del clic en el botón "Salir"
-    $("#btExit").on("click", function() {
-      // Aquí puedes agregar la lógica para salir de la aplicación si es necesario
-      alert("Saliendo...");
-      // Por ejemplo, podrías redirigir a otra página o cerrar la app.
+
+    // Lógica para el botón de salir
+    $('#btExit').on('click', function () {
+        navigator.app.exitApp();
+        // Aquí puedes manejar la lógica de salir, como cerrar sesión o redirigir
     });
-  
-    // Manejo del clic en el botón "Registrarse"
-    $("#btRegister").on("click", function() {
-      // Aquí puedes agregar la lógica para redirigir a la página de registro si la tienes.
-      window.location.href = "register.html"; // Cambia esto a la ruta correcta
+});
+
+
+$(document).ready(function () {
+    $('.ui-btn-Register').on('click', function () {
+        window.location.href = 'register.html'; // Cambia a la ruta correcta si es necesario
     });
-  });
+});

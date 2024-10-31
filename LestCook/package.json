@@ -6,15 +6,23 @@
     },
     "displayName": "Lest Cook",
     "dependencies": {
-        "cordova-android": "^8.1.0",
-        "cordova-sqlite-storage": "6.1.0"
+        "cordova-android": "^13.0.0",
+        "cordova-plugin-advanced-http": "3.3.1",
+        "cordova-plugin-file": "8.1.1",
+        "cordova-sqlite-storage": "6.1.0",
+        "underscore": "^1.13.7",
+        "whatwg-fetch": "^3.6.20"
     },
     "cordova": {
         "platforms": [
             "android"
         ],
         "plugins": {
-            "cordova-sqlite-storage": {}
+            "cordova-sqlite-storage": {},
+            "cordova-plugin-advanced-http": {
+                "ANDROIDBLACKLISTSECURESOCKETPROTOCOLS": "SSLv3,TLSv1"
+            },
+            "cordova-plugin-file": {}
         }
     }
 }

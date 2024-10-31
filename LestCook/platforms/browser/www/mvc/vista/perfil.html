@@ -1,52 +1,68 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="theme-color" content="#2196f3" />
-    <title>Perfil del Usuario</title>
+<div class="profile-container">
+    <!DOCTYPE html>
+    <html>
+    
+    <head>
+      <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    
+      <meta charset="utf-8" />
+      <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+    
+      <!-- ? Color theme for statusbar | No se que es esto -->
+      <meta name="theme-color" content="#2196f3" />
+    
+      <title>Perfil</title>
+    
+      <link rel="stylesheet" href="../../lib/framework7/css/framework7.min.css" />
+      <script type="text/javascript" src="../../jquery/jquery-2.2.3.min.js"></script>
+      <link rel="stylesheet" href="../../css/perfil.css" />
+    </head>
 
-    <link rel="stylesheet" href="../../lib/framework7/css/framework7.min.css" />
-    <link rel="stylesheet" href="../../css/styles.css" />
-    <link rel="stylesheet" href="../../css/perfil.css" />
-    <link rel="stylesheet" href="styles.css" />
-    <script type="text/javascript" src="../../jquery/jquery-2.2.3.min.js"></script>
-</head>
+    <script src="../controlador/perfil.js"></script>
 
-<body>
-    <div class="profile-container">
-        <header>
-            <h1>Perfil del Usuario</h1>
-        </header>
 
-        <div class="profile-box">
-            <img src="ruta/a/tu/foto-de-perfil.jpg" alt="Foto de Usuario" class="profile-pic" />
 
-            <div class="edit-profile">
-                <a href="#" id="edit-perfil">Editar Perfil</a>
-            </div>
+    <div class="profile-box">
 
-            <p class="name">Juan Pérez</p>
-            <p class="email">juan.perez@example.com</p>
+      <div>
+        <button class="backButton"><?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+          <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16.1795 3.26875C15.7889 2.87823 15.1558 2.87823 14.7652 3.26875L8.12078 9.91322C6.94952 11.0845 6.94916 12.9833 8.11996 14.155L14.6903 20.7304C15.0808 21.121 15.714 21.121 16.1045 20.7304C16.495 20.3399 16.495 19.7067 16.1045 19.3162L9.53246 12.7442C9.14194 12.3536 9.14194 11.7205 9.53246 11.33L16.1795 4.68297C16.57 4.29244 16.57 3.65928 16.1795 3.26875Z" fill="#0F0F0F"/>
+          </svg></button>
+      </div>
 
-            <div class="profile-actions">
-                <button id="upload-recipe">Subir Receta</button>
-                <button id="change-password">Cambiar contraseña</button>
-                <button id="support">Soporte</button>
-                <button class="edit-logout" id="logout">Logout</button>
-            </div>
+      <div>
+        <img class="profile-pic" src="https://static.vecteezy.com/system/resources/previews/026/434/409/non_2x/default-avatar-profile-icon-social-media-user-photo-vector.jpg" alt="Foto de perfil">
+        <div class="edit-profile">
+          <a href="#" id="edit-perfil">Editar Perfil</a> <!-- href="." será reemplazado dinámicamente -->
+          <h1 id="nombreUsuario">Nombre del Usuario</h1>
+          <p id="emailUsuario">Email del Usuario</p>
+      </div>
+      
+      </div>
+      
+        <div class="profile-actions">
+            <button class="botonesPerfil" id="upload-recipe">Subir Receta <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+              <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#FFFFFF"/>
+              </svg></button>
+            <button class="botonesPerfil" id="change-password">Cambiar contraseña <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+              <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#FFFFFF"/>
+              </svg></button>
+            <button class="botonesPerfil" id="support">Soporte <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+              <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#FFFFFF"/>
+              </svg></button>
+
+              
+            <button class="edit-logout" id="logout">Logout <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+              <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#FFFFFF"/>
+              </svg></button>
         </div>
     </div>
-
-    <footer>
-        &copy; 2024 LetsCook. Todos los derechos reservados.
-    </footer>
-
-    <script type="text/javascript" src="../controlador/perfil.js"></script>
-    <script type="text/javascript" src="../../cordova.js"></script>
-    <script type="text/javascript" src="../../lib/framework7/js/framework7.min.js"></script>
-    <script type="text/javascript" src="../../js/my-app.js"></script>
-</body>
-</html>
+</div>

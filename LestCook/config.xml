@@ -17,6 +17,8 @@
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
+        <access origin="https://lets-cooking-backend-g4mo.vercel.app" />
+        <access origin="https://cdnjs.cloudflare.com" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
