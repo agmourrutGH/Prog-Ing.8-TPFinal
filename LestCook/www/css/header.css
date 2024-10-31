@@ -15,7 +15,7 @@
   margin: 10px;
   border-radius: 42px;
   height: 70px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.507); /* Efecto de sombra */
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.507); Efecto de sombra */
   position: fixed;
   bottom: 0;
   left: 0;

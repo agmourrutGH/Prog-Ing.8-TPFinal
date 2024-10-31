@@ -1,38 +1,47 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actualizar Perfil</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../lib/framework7/css/framework7.min.css" />
-    <script type="text/javascript" src="../../jquery/jquery-2.2.3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/whatwg-fetch/3.6.2/fetch.min.js"></script>
-</head>
-<body>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; media-src *">
+        <title>Actualizar Perfil</title>
+        <link rel="stylesheet" href="../../css/editar-perfil.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script
+        type="text/javascript"
+        src="../../jquery/jquery-2.2.3.min.js"
+        ></script>
+    </head>
+    
+<body> 
 
-<script src="../controlador/editarPerfil.js"></script>
+    <div class="botonDiv">
+        <button class="backButton"><?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+          <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16.1795 3.26875C15.7889 2.87823 15.1558 2.87823 14.7652 3.26875L8.12078 9.91322C6.94952 11.0845 6.94916 12.9833 8.11996 14.155L14.6903 20.7304C15.0808 21.121 15.714 21.121 16.1045 20.7304C16.495 20.3399 16.495 19.7067 16.1045 19.3162L9.53246 12.7442C9.14194 12.3536 9.14194 11.7205 9.53246 11.33L16.1795 4.68297C16.57 4.29244 16.57 3.65928 16.1795 3.26875Z" fill="#0F0F0F"/>
+          </svg>
+        </button>
+        <p>Volver a perfil</p>
+    </div>
+    
+    <h1 class="tituloEditar">Actualizar Perfil</h1>
+    <div class="contenedorForm">
+        <form id="updateForm">
+            <div class="labelDiv">
+                <label for="inNombre">Nombre</label>
+            </div>
+            <input type="text" id="inNombre" required />
+            <br />
+            <div class="labelDiv">
+                <label for="inCorreo">Correo</label>
+            </div>
+            <input type="email" id="inCorreo" required />
+            <br />
+            <button class="ui-btn" type="submit">Actualizar</button>
+        </form>
+    </div>
 
-<div class="container mt-5">
-    <h2>Actualizar Perfil</h2>
-    <form id="editarPerfilForm">
-        <div class="form-group">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Correo:</label>
-            <input type="email" id="email" name="correo" class="form-control" placeholder="Correo" required>
-        </div>
-        <div class="form-group">
-            <label for="foto">Foto de Perfil:</label>
-            <input type="file" id="foto" name="foto_perfil" class="form-control-file" accept="image/*">
-        </div>
-        <button type="button" id="btnactualizarperfil" class="btn btn-primary">Actualizar Perfil</button>
-        <div id="mensaje" class="mt-3"></div>
-    </form>
-</div>
-
-
+    <!-- Asegúrate de que este script se carga después de jQuery -->
+    <script src="../controlador/updateProfile.js"></script>
 </body>
 </html>

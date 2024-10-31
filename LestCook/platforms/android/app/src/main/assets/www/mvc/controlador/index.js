@@ -18,6 +18,17 @@ $(document).ready(function () {
   });
 });
 
+$(document).ready(function () {
+  $('#svgs-Recetas').on('click', function () {
+          window.location.href = `recetas.html`;
+  });
+});
+
+$(document).ready(function () {
+  $('#goHome').on('click', function () {
+          window.location.href = `index.html`;
+  });
+});
 
 
 document.addEventListener("DOMContentLoaded", function() {

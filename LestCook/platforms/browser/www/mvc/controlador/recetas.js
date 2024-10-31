@@ -69,3 +69,37 @@ $(document).ready(function () {
 });
 {/* <img src="${recipe.foto_receta}" alt="${recipe.nombre_receta}" style="width: 200px;"></img>  SE PODRIA IMPLEMENTAR EN EL FETCH
 EN CASO DE QUE FUNCIONEN LAS IMAGENES*/}
+
+
+
+$(document).ready(function () {
+    $('#svgs-EditarPerfil').on('click', function () {
+      const userId = sessionStorage.getItem('userId'); // Obtiene el ID del usuario de sessionStorage
+      
+      if (userId) {
+        // Redirige a perfil.html con el ID del usuario
+        window.location.href = `perfil.html?id=${userId}`;
+      } else {
+        alert('No has iniciado sesión.');
+        // Aquí puedes redirigir al usuario a la página de inicio de sesión si lo deseas
+      }
+    });
+  });
+  
+  $('#btSalir').click(salir);
+  function salir(){
+      navigator.app.exitApp();
+  }
+  
+  $(document).ready(function () {
+    $('#svgs-Recetas').on('click', function () {
+            window.location.href = `recetas.html`;
+    });
+  });
+  
+  $(document).ready(function () {
+    $('#goHome').on('click', function () {
+            window.location.href = `index.html`;
+    });
+  });
+  

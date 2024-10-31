@@ -52,11 +52,17 @@ $(document).ready(function () {
         navigator.app.exitApp();
         // Aquí puedes manejar la lógica de salir, como cerrar sesión o redirigir
     });
-});
-
-
-$(document).ready(function () {
-    $('.ui-btn-Register').on('click', function () {
-        window.location.href = 'register.html'; // Cambia a la ruta correcta si es necesario
+    
+    $(document).ready(function () {
+        console.log("Documento listo"); // Confirma que el documento está completamente cargado.
+    
+        $('#btRegister').on('click', function () {
+            console.log("Botón 'Registrarse' fue presionado"); // Verifica que el evento 'click' se active.
+            
+            // Intenta redirigir a register.html
+            window.location.href = 'register.html';
+            console.log("Intentando redirigir a register.html");
+        });
     });
 });
+

@@ -6,6 +6,12 @@
     font-family: "Exo 2", sans-serif;
 }
 
+.contenidoPrincipal {
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* Habilitar el scroll en el contenedor principal */
+  }
+
 h1 {
     margin-bottom: 80px;
 }

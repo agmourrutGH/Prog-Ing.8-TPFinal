@@ -1,8 +1,8 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "LETS COOK",
-  "short_name": "LETS COOK",
+  "name": "¡Let's cook!",
+  "short_name": "¡Let's cook!",
   "version": "com.letscook.app",
   "description": "A basic Framework7 template for PhoneGap.",
   "author": "Apache Cordova Team",
